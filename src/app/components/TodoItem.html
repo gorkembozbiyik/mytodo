@@ -1,0 +1,13 @@
+<li ng-class="{'editing': $ctrl.editing, 'completed': $ctrl.todo.completed}">
+	
+	<h2>{{ $ctrl.todo.id + 1 }}</h2>
+	<label>{{$ctrl.todo.title}}</label>
+	<label>{{$ctrl.todo.content}}</label>
+	<div>
+		<button ng-click="$ctrl.onChange({id: $ctrl.todo.id})">{{ $ctrl.todo.completed ? 'UNMARK' : 'MARK AS DONE' }}</button>
+		<button ng-click="$ctrl.handleEdit($ctrl.todo.title, $ctrl.todo.content)" ng-disabled="$ctrl.todo.completed">EDIT</button>
+		<button ng-click="$ctrl.handleDestroy($ctrl.todo.id)">REMOVE</button>
+	</div>
+	
+	
+</li>

@@ -1,0 +1,19 @@
+<footer class="footer">
+
+	<h2 class="todo-count"> You have {{$ctrl.activeCount || 'No'}} {{$ctrl.activeCount === 1 ? 'thing' : 'things'}} to do </h2>
+
+  <!--
+  <ul class="filters">
+    <li key="filter" ng-repeat="filter in $ctrl.filters">
+      <a ng-class="{'selected': filter === $ctrl.selectedFilter.type}" ng-click="$ctrl.handleChange(filter)">{{$ctrl.filterTitles[filter]}}</a>
+    </li>
+  </ul>
+  -->
+  
+	<button 
+		ng-disabled="!$ctrl.completedCount > 0"
+		class="clear-completed"
+		ng-click="$ctrl.handleClear()"
+	>REMOVE ALL DONE</button>
+	
+</footer>
